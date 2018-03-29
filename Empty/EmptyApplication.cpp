@@ -2,6 +2,7 @@
 
 namespace My 
 {
-    BaseApplication g_App;
+    GfxConfiguration conf;
+    BaseApplication g_App(conf);
     IApplication* g_pApp = &g_App;
 }
