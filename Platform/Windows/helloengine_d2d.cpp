@@ -148,10 +148,9 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 					D2D1_FACTORY_TYPE_SINGLE_THREADED, &pFactory)))
 		{
 			result = -1; // Fail CreateWindowEx.
-            return result;
 		}
 		wasHandled = true;
-        result = 0;
+        result = 1;
         break;	
 
 	case WM_PAINT:
@@ -246,7 +245,7 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 		DiscardGraphicsResources();
 		if (pFactory) {pFactory->Release(); pFactory=nullptr; }
 		PostQuitMessage(0);
-        result = 0;
+        result = 1;
 		wasHandled = true;
         break;
 
