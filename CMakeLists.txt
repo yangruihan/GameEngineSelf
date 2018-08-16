@@ -13,8 +13,12 @@ set (CMAKE_CXX_FLAGS_MINSIZEREL     "-Os -DNDEBUG")
 set (CMAKE_CXX_FLAGS_RELEASE        "-O4 -DNDEBUG")
 set (CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2 /Debug")
 set (CMAKE_CXX_STANDARD 11)
+
 project (GameEngineSelf)
+
 include_directories("${PROJECT_SOURCE_DIR}/Framework/Common")
 include_directories("${PROJECT_SOURCE_DIR}/Framework/Interface")
+
 add_subdirectory(Framework)
 add_subdirectory(Empty)
+
