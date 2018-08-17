@@ -54,7 +54,8 @@ static int ctxErrorHandler(Display *dpy, XErrorEvent *ev)
     return 0;
 }
 
-void DrawAQuad() {
+void DrawAQuad()
+{
     glClearColor(1.0, 1.0, 1.0, 1.0); 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
 
@@ -78,7 +79,8 @@ void DrawAQuad() {
     glEnd(); 
 } 
 
-int main(void) {
+int main(void)
+{
     xcb_connection_t    *pConn;
     xcb_screen_t        *pScreen;
     xcb_window_t        window;

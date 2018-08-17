@@ -2,7 +2,8 @@
 #include <windowsx.h>
 #include "BaseApplication.hpp"
 
-namespace My {
+namespace My
+{
     class WindowsApplication : public BaseApplication
     {
     public:
@@ -10,15 +11,15 @@ namespace My {
             : BaseApplication(config) {};
 
        	virtual int Initialize();
-		virtual void Finalize();
-		// One cycle of the main loop
-		virtual void Tick();
+        virtual void Finalize();
+        // One cycle of the main loop
+        virtual void Tick();
 
         // the WindowProc function prototype
         static LRESULT CALLBACK WindowProc(HWND hWnd,
-                         UINT message,
-                         WPARAM wParam,
-                         LPARAM lParam);
+                                           UINT message,
+                                           WPARAM wParam,
+                                           LPARAM lParam);
     };
 }
 
